@@ -3,6 +3,7 @@ package ru.netology.test;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class PostmanApiTest {
     @Test
@@ -14,7 +15,7 @@ public class PostmanApiTest {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("foo1", equalTo("bar1"))
+                .body("data", equalTo("sodata"))
         ;
     }
 }
