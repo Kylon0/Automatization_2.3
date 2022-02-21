@@ -15,7 +15,7 @@ public class PostmanApiTest {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("host", equalTo("postman-echo.com"))
+                .body("data", equalTo("some data"))
         ;
     }
 }
